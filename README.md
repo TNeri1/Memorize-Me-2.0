@@ -16,8 +16,6 @@ I really devloped this with two goals in mind:
 * I want this app to be something I could use and continue to develop as I progressively use it.
 * I also want this app to be something that my fellow classmates can use. (Who knows, I might publish this on the Google PlayStore)
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the app running and a walkthrough of the code.}
-
 [Memorize Me App Demo Video](https://youtu.be/Cl1EzGCWJ5s)
 
 ## Development Environment

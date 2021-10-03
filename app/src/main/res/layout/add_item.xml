@@ -5,7 +5,7 @@
     android:gravity="center"
     android:layout_margin="15dp"
     >
-
+  234
     <LinearLayout
         android:orientation="vertical"
         android:paddingBottom="15dp"
@@ -15,11 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Add Topic:"
+            android:text="New Card:"
             android:textStyle="bold"
             android:textSize="19sp"
             android:textColor="@color/white"
-            android:background="@color/purple_500"
+            android:background="@color/teal_200"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingBottom="8dp"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"/>
         <EditText
             android:id="@+id/userTopic"
-            android:hint="Linear Algebra"
+            android:hint="(Topic)"
             android:inputType="textAutoComplete"
             android:textColor="@color/teal_700"
             android:textSize="18sp"
@@ -38,16 +38,28 @@
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
         <EditText
             android:id="@+id/userQuestion"
-            android:hint="What is Theorem 4?"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:hint="(Question)"
+            android:inputType="textMultiLine"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/userAnswer"
+            android:hint="(Answer)"
             android:inputType="textMultiLine"
             android:textColor="@color/teal_700"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_margin="15dp"
             android:layout_width="match_parent"
-            android:layout_height="300dp"/>
+            android:layout_height="100dp"/>
 
     </LinearLayout>
 

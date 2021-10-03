@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recv: RecyclerView
     private lateinit var userList: ArrayList<UserData>
     private lateinit var userAdapter: UserAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,7 +35,9 @@ class MainActivity : AppCompatActivity() {
         // Set dialog
         addsBtn.setOnClickListener { addInfo() }
 
-    }
+
+
+}
 
     private fun addInfo() {
         val inflater = LayoutInflater.from(this)
@@ -41,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         // Set View
         val userTopic = v.findViewById<EditText>(R.id.userTopic)
         val userQuestion = v.findViewById<EditText>(R.id.userQuestion)
+        val userAnswer = v.findViewById<EditText>(R.id.userAnswer)
 
         val addDialog = AlertDialog.Builder(this)
 
@@ -49,7 +54,8 @@ class MainActivity : AppCompatActivity() {
             dialog,_->
             val topics = userTopic.text.toString()
             val questions = userQuestion.text.toString()
-            userList.add(UserData("Topic: $topics", "Question: $questions"))
+            val answers = userAnswer.text.toString()
+            userList.add(UserData("${topics}", "${questions}", "${answers}"))
             userAdapter.notifyDataSetChanged()
             Toast.makeText(this, "Added", Toast.LENGTH_SHORT).show()
             dialog.dismiss()
